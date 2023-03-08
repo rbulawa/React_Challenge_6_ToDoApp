@@ -1,0 +1,169 @@
+body {
+  margin: 0 auto;
+}
+
+.App {
+  margin-top: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-completed {
+  background-color: #92fac1;
+}
+
+.input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #ce4c66;
+  border-radius: 10px;
+  padding: 8px 15px;
+  color: #ce4c66;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.priority {
+  top: -8px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #56a2c5;
+  font-weight: 600;
+}
+
+.priority-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.priority-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  font-weight: bold;
+  background-color: #56a2c5;
+  color: #ecebeb;
+  cursor: pointer;
+}
+
+.task {
+  min-width: 350px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 4px;
+  border-radius: 30px;
+  padding: 6px 15px;
+  color: #414040;
+  font-weight: bold;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+
+.task-text {
+  margin: 0;
+  max-width: 20ch;
+  word-break: break-all;
+  text-align: left;
+  display: flex;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 44px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 90px;
+}
+
+.remove-btn {
+  background-color: #ce4c66;
+  color: white;
+}
+
+.remove-btn:hover,
+.remove-btn:active {
+  background-color: #eb264e;
+}
+
+.toggle-btn {
+  border: 1px solid #d36d8c00;
+  background-color: #d36d8c00;
+  color: #ce4c66;
+}
+
+.toggle-btn:hover,
+.toggle-btn:active {
+  border: 1px solid #eb264e;
+  color: #eb264e;
+}
+
+.removed {
+  animation: remove 0.2s ease-in-out 0.2s 1;
+}
+
+.sort-wrapper {
+  margin: 30px 0;
+  font-weight: bold;
+  color: #414040;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-wrapper select {
+  background-color: #56a2c5;
+  color: #ecebeb;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes remove {
+  0% {
+    transform: translateX(-0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
